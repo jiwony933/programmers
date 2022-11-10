@@ -1,3 +1,5 @@
+// 제곱근이 정수이면, 약수의 개수가 홀수인 점을 이용
+
 function solution(left, right) {
     var answer = 0;
 
@@ -8,5 +10,3 @@ function solution(left, right) {
     return answer;
 }
 
-console.log(solution(13, 17));
-console.log(solution(24, 27));
