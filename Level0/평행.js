@@ -6,9 +6,7 @@ function solution(dots) {
       inclinations.push(inclination);
     }
   }
-
   const set = [...new Set(inclinations)];
-
   return set.length === inclinations.length ? 0 : 1;
 }
 
