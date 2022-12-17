@@ -1,30 +1,42 @@
-function solution(s) {
-  var answer = [];
-  let arr = s.split(" ");
-
-  for (let i = 0; i < arr.length; i += 1) {
-    let changed = "";
-
-    arr[i][0] == Number(arr[i][0])
-      ? (changed += arr[i][0])
-      : (changed += arr[i][0].toUpperCase());
-    changed += arr[i].slice(1).toLowerCase();
-    answer.push(changed);
+function solution(str) {
+  let answer = "";
+  for (let i = 0; i < str.length; i++) {
+    if (i === 0 || str[i - 1] === " ") {
+      answer += str[i].toUpperCase();
+    } else {
+      answer += str[i].toLowerCase();
+    }
   }
-
-  return answer.join(" ");
+  return answer;
 }
 
 // function solution(s) {
 //   var answer = [];
-//   let arr = s.split(" ");
+//   let wordArr = s.split(" ").filter((el) => el !== "");
 
-//   for (let i = 0; i < arr.length; i += 1) {
+//   for (let i = 0; i < wordArr.length; i += 1) {
+//     let changed = "";
+//     wordArr[i][0] == Number(wordArr[i][0])
+//       ? (changed += wordArr[i][0])
+//       : (changed += wordArr[i][0].toUpperCase());
+//     changed += wordArr[i].slice(1).toLowerCase();
 //     answer.push(changed);
 //   }
 
 //   return answer.join(" ");
 // }
 
-console.log(solution("3people unFollowed me"));
-console.log(solution("for the last week"));
+function solution(str) {
+  let answer = "";
+  for (let i = 0; i < str.length; i++) {
+    if (i === 0 || str[i - 1] === " ") {
+      answer += str[i].toUpperCase();
+    } else {
+      answer += str[i].toLowerCase();
+    }
+  }
+  return answer;
+}
+
+console.log(solution("33eople  unFollowed me"));
+solution("for the last week");
